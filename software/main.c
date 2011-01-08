@@ -268,7 +268,7 @@ void setup()
   // select VBG as reference for ADC
   ADMUX |= (1<<REFS1) | (1<<REFS0);
   // ADC prescaler set to 8 => 1000kHz / 8 = 125kHz (DS p.258)
-  ADCSRA |= (1<<ADPS1) | (1<<ADPS0);
+  ADCSRA |= (1<<ADPS1) | (1<<ADPS0) | (1<<ADPS2); //DONE, since frequency is 16Mhz, Prescaler needs to be 128 to achieve 125Khz
   // enable ADC and start a first ADC conversion
   ADCSRA |= (1<<ADEN) | (1<<ADSC);
 
