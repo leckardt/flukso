@@ -346,7 +346,7 @@ void send(uint8_t msg_type, const struct sensor *measurement, const struct state
   }
 
   printString(message);
-  printString("\r");
+//  printString("\r");
 }
 
 void loop()
